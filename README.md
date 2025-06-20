@@ -1,76 +1,53 @@
+# Hi there 👋, I'm **Yugendran Kumar**
+
+### A Full‑Stack Developer | Cloud Enthusiast | ML Explorer
+
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/74038190/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif" alt="Welcome GIF" width="100%" />
+  <img src="https://github.com/syedomar1/syedomar1/blob/main/code.gif" alt="code GIF" width="50%" />
 </p>
 
-# Hi there, I'm Yugendran K 👋
-
-### Aspiring Data Scientist & AI Enthusiast 💡
-
-- 🎓 B.Tech CSE student at **Amrita Vishwa Vidyapeetham (2022–2026)**
-- 🧠 Exploring **AI**, **Data Science**, and **Deep Learning**
-- 🔧 Currently working on a mobile app to connect farmers with retailers and consumers
-- ☁️ AWS Academy Cloud Foundations certified
-- 🎯 Passionate about turning data into insights
+- 🔭 Currently working on Full‑Stack and Cloud Projects
+- 🌱 Learning AWS, Python Backend, and Model Optimization
+- 👯 Looking to collaborate on Open Source & Real‑World Tech
+- 💬 Ask me about Python, JavaScript, and Cloud Development
+- 📫 Reach me at: satharukmani@gmail.com
 
 ---
 
-### 🛠 Technical Skills
+### 🧰 Tech Stack
 
-![Python](https://img.shields.io/badge/-Python-%2314354C?logo=python&logoColor=white)
-![Java](https://img.shields.io/badge/-Java-%23ED8B00?logo=java&logoColor=white)
-![C](https://img.shields.io/badge/-C-%2300599C?logo=c&logoColor=white)
-![SQL](https://img.shields.io/badge/-SQL-%23007ACC?logo=sqlite&logoColor=white)
-![HTML5](https://img.shields.io/badge/-HTML5-%23E34F26?logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/-CSS3-%231572B6?logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/-JavaScript-%23F7DF1E?logo=javascript&logoColor=black)
-![Node.js](https://img.shields.io/badge/-Node.js-%2343853D?logo=node.js&logoColor=white)
-![MongoDB](https://img.shields.io/badge/-MongoDB-%2347A248?logo=mongodb&logoColor=white)
-![Git](https://img.shields.io/badge/-Git-%23F05032?logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/-GitHub-%23121011?logo=github&logoColor=white)
-![AWS](https://img.shields.io/badge/-AWS-%23FF9900?logo=amazonaws&logoColor=white)
+![C](https://img.shields.io/badge/C-00599C?style=flat&logo=c&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=c%2B%2B&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=java&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazonaws&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat&logo=postgresql&logoColor=white)
 
 ---
 
-### 📚 Certifications
+### 🔗 Connect with Me
 
-- ✅ [Object Oriented Programming in Java – UC San Diego](#)
-- ✅ [Python for Data Science – IBM](#)
-- ✅ [Crash Course on Python – Google](#)
-- ✅ [SQL – Bitlabs](#)
-- ✅ [Generative AI – Microsoft & LinkedIn](#)
-- ✅ [AWS Academy Cloud Foundations](#)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yugendran-kumar-91128a253/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/YUGIIIIII)
+[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=flat&logo=githubpages&logoColor=white)](https://yugiiiiii.github.io/PORTFOLIO/)
 
 ---
 
-### 🌱 Currently Learning
+### 📌 Projects
 
-- 🔢 Neural Networks & Deep Learning  
-- 🛢️ Data Warehousing and Distributed Systems  
-- 🧠 Real-world AI applications
+#### 🔹 [Odisha RERA Project Scraper](https://github.com/YUGIIIIII/rera-web-crawler)
+Scraped real estate data from a government site using Selenium.
 
----
+#### 🔹 [Personal Portfolio](https://yugiiiiii.github.io/PORTFOLIO/)
+Interactive developer portfolio built with HTML, CSS, JS, MondoDb and Express.js.
 
-### 📌 Technical Interests
-
-- Data Science & Analytics  
-- Deep Learning  
-- AI for Social Good  
-- Backend Development
+#### 🔹 Earthquake Visualizer
+Map-based data viz for earthquake activity using Java + PApplet.
 
 ---
 
-### 📬 Get in Touch
-
-- 📧 satharukmani@gmail.com  
-- 💼 [LinkedIn](https://www.linkedin.com/in/yugendran-kumar/)  
-- 🐙 [GitHub](https://github.com/YUGIIIIII)
-
----
-
-### ⚡ GitHub Stats
-
-![Yugendran's GitHub Stats](https://github-readme-stats.vercel.app/api?username=YUGIIIIII&show_icons=true&theme=tokyonight)
-
----
-
-> *“Stay curious, keep learning, and never stop building.”* 🚀
+⭐️ From [**YUGIIIIII**](https://github.com/YUGIIIIII)

@@ -1,11 +1,10 @@
-## Hi there I'm Yugendran K 👋
+# Hi there, I'm Yugendran K 👋
 
 ### Aspiring Data Scientist & AI Enthusiast 💡
 
 - 🎓 B.Tech CSE student at **Amrita Vishwa Vidyapeetham (2022–2026)**
 - 🧠 Exploring **AI**, **Data Science**, and **Deep Learning**
 - 🔧 Currently working on a mobile app to connect farmers with retailers and consumers
-- 🌐 Tech intern experience at **Oasis Infobyte (Python Developer)**
 - ☁️ AWS Academy Cloud Foundations certified
 - 🎯 Passionate about turning data into insights
 
@@ -41,33 +40,33 @@
 
 ### 🌱 Currently Learning
 
-- 🔢 Neural Networks & Deep Learning
-- 🛢️ Data Warehousing and Distributions
+- 🔢 Neural Networks & Deep Learning  
+- 🛢️ Data Warehousing and Distributed Systems  
 - 🧠 Real-world AI applications
 
 ---
 
 ### 📌 Technical Interests
 
-- Data Science & Analytics
-- Deep Learning
-- AI for Social Good
-- FullStack Development
+- Data Science & Analytics  
+- Deep Learning  
+- AI for Social Good  
+- Backend Development
 
 ---
 
 ### 📬 Get in Touch
 
-- 📧 satharukmani@gmail.com
-- 💼 [LinkedIn](https://www.linkedin.com/in/yugendran-kumar/) 
+- 📧 satharukmani@gmail.com  
+- 💼 [LinkedIn](https://www.linkedin.com/in/yugendran-kumar/)  
 - 🐙 [GitHub](https://github.com/YUGIIIIII)
 
 ---
 
-### ⚡ GitHub Stats (Optional)
+### ⚡ GitHub Stats
 
 ![Yugendran's GitHub Stats](https://github-readme-stats.vercel.app/api?username=YUGIIIIII&show_icons=true&theme=tokyonight)
 
 ---
 
-> *“Stay curious, keep learning, and never stop building.”*
+> *“Stay curious, keep learning, and never stop building.”* 🚀

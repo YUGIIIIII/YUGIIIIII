@@ -1,53 +1,130 @@
-# Hi there 👋, I'm **Yugendran Kumar**
+#include <bits/stdc++.h>
+using namespace std;
 
-### A Full‑Stack Developer | Cloud Enthusiast | ML Explorer
+// Store grammar as a map: Non-terminal -> list of productions
+map<string, vector<string>> grammar;
 
-<p align="center">
-  <img src="https://github.com/syedomar1/syedomar1/blob/main/code.gif" alt="code GIF" width="50%" />
-</p>
+// Function to print the grammar
+void printGrammar(const map<string, vector<string>> &g) {
+    cout << "--------------------------------------------\n";
+    for (auto &p : g) {
+        cout << p.first << " -> ";
+        for (size_t i = 0; i < p.second.size(); ++i) {
+            cout << p.second[i];
+            if (i < p.second.size() - 1) cout << " | ";
+        }
+        cout << endl;
+    }
+    cout << "--------------------------------------------\n";
+}
 
-- 🔭 Currently working on Full‑Stack and Cloud Projects
-- 🌱 Learning AWS, Python Backend, and Model Optimization
-- 👯 Looking to collaborate on Open Source & Real‑World Tech
-- 💬 Ask me about Python, JavaScript, and Cloud Development
-- 📫 Reach me at: satharukmani@gmail.com
+// Function to eliminate immediate left recursion
+map<string, vector<string>> eliminateLeftRecursion(const map<string, vector<string>> &g) {
+    map<string, vector<string>> newGrammar;
 
----
+    for (auto &p : g) {
+        const string &A = p.first;      // Current non-terminal
+        vector<string> alpha, beta;      // alpha: recursive parts, beta: non-recursive
 
-### 🧰 Tech Stack
+        // Separate productions into alpha and beta
+        for (const string &prod : p.second) {
+            if (prod.substr(0, A.size()) == A)
+                alpha.push_back(prod.substr(A.size()));  // remove leading A
+            else
+                beta.push_back(prod);
+        }
 
-![C](https://img.shields.io/badge/C-00599C?style=flat&logo=c&logoColor=white)
-![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=c%2B%2B&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=java&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazonaws&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat&logo=postgresql&logoColor=white)
+        if (!alpha.empty()) {
+            string Aprime = A + "'";  // New non-terminal for recursion
+            for (const string &b : beta) newGrammar[A].push_back(b + Aprime);
+            for (const string &a : alpha) newGrammar[Aprime].push_back(a + Aprime);
+            newGrammar[Aprime].push_back("^"); // epsilon
+        } else {
+            newGrammar[A] = p.second; // No recursion
+        }
+    }
+    return newGrammar;
+}
 
----
+// Function to perform left factoring
+map<string, vector<string>> leftFactor(const map<string, vector<string>> &g) {
+    map<string, vector<string>> newGrammar;
 
-### 🔗 Connect with Me
+    for (auto &p : g) {
+        const string &A = p.first;
+        vector<string> prods = p.second;
+        bool factored = false;
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yugendran-kumar-91128a253/)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/YUGIIIIII)
-[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=flat&logo=githubpages&logoColor=white)](https://yugiiiiii.github.io/PORTFOLIO/)
+        sort(prods.begin(), prods.end()); // sort to find common prefixes
 
----
+        for (size_t i = 0; i < prods.size(); ++i) {
+            for (size_t j = i + 1; j < prods.size(); ++j) {
+                size_t k = 0;
+                // Find common prefix length
+                while (k < prods[i].size() && k < prods[j].size() && prods[i][k] == prods[j][k])
+                    ++k;
 
-### 📌 Projects
+                if (k > 0) { // Common prefix found
+                    string prefix = prods[i].substr(0, k);
+                    string Aprime = A + "'"; 
+                    vector<string> remain;
 
-#### 🔹 [Odisha RERA Project Scraper](https://github.com/YUGIIIIII/rera-web-crawler)
-Scraped real estate data from a government site using Selenium.
+                    // Separate remaining parts
+                    for (auto &x : prods)
+                        if (x.substr(0, k) == prefix)
+                            remain.push_back(x.substr(k).empty() ? "^" : x.substr(k));
+                        else
+                            newGrammar[A].push_back(x);
 
-#### 🔹 [Personal Portfolio](https://yugiiiiii.github.io/PORTFOLIO/)
-Interactive developer portfolio built with HTML, CSS, JS, MondoDb and Express.js.
+                    newGrammar[A].push_back(prefix + Aprime); // Add factored production
+                    newGrammar[Aprime] = remain;             // Add new non-terminal
+                    factored = true;
+                    break;
+                }
+            }
+            if (factored) break;
+        }
+        if (!factored) newGrammar[A] = prods; // No factoring needed
+    }
+    return newGrammar;
+}
 
-#### 🔹 Earthquake Visualizer
-Map-based data viz for earthquake activity using Java + PApplet.
+int main() {
+    int n;
+    cout << "Enter number of productions: ";
+    cin >> n;
+    cin.ignore(); // ignore leftover newline
 
----
+    // Read all productions
+    for (int i = 0; i < n; ++i) {
+        string line;
+        cout << "Enter production " << i + 1 << ": ";
+        getline(cin, line);
 
-⭐️ From [**YUGIIIIII**](https://github.com/YUGIIIIII)
+        size_t arrow = line.find("->");
+        if (arrow == string::npos) { cout << "Invalid format!\n"; return 1; }
+
+        string lhs = line.substr(0, arrow);           // LHS non-terminal
+        string rhs = line.substr(arrow + 2);          // RHS string
+
+        stringstream ss(rhs);
+        string prod;
+        while (getline(ss, prod, '|'))                // Split by '|'
+            grammar[lhs].push_back(prod);
+    }
+
+    cout << "\nOriginal Grammar:\n"; 
+    printGrammar(grammar);
+
+    // Eliminate left recursion
+    grammar = eliminateLeftRecursion(grammar);
+    cout << "\nAfter Eliminating Left Recursion:\n"; 
+    printGrammar(grammar);
+
+    // Perform left factoring
+    grammar = leftFactor(grammar);
+    cout << "\nAfter Left Factoring:\n"; 
+    printGrammar(grammar);
+
+    return 0;
+}
